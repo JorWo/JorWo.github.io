@@ -33,11 +33,11 @@
         ay = accelerationY;
         
         if (ax > xHigh) {
-          ax = xHigh;
+          xHigh = ax;
         }
         
         if (ay > yHigh) {
-          ay = yHigh;
+          yHigh = ay;
         }
         
         document.getElementById('ax').innerHTML = "AccelerometerX value: " + xHigh;
