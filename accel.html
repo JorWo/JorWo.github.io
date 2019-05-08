@@ -23,7 +23,7 @@
     <script>
       var r = 255;
       var g = 255;
-      var b = 255;
+      var b = 0;
       var ax;
       var ay;
       var xHigh = 0;
@@ -40,14 +40,14 @@
           xHigh = ax;
           r = xHigh;
           g = 255-xHigh;
-          b = 255-xHigh;
+          //b = 255+xHigh;
         }
         
         if (ay > yHigh) {
           yHigh = ay;
           r = yHigh;
           g = 255-yHigh;
-          b = 255-yHigh;
+          //b = 255+yHigh;
         }
         
         document.body.style.backgroundColor = 'rgb(' + r +','+ g +','+ b + ')';
