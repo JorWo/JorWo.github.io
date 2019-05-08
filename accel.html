@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <style>
+      body {
+        font-size:50px;
+        position:fixed;
+      }
+      
+      #ax {
+        color:green;
+      }
+      
+      #ay {
+        color:purple;
+      }
+    </style>
+  </head>
+  <body>
+  <p id='ax'></p>
+  <p id='ay'></p>
+    <script>
+      var ax;
+      var ay;
+      var xHigh = 0;
+      var yHigh = 0;
+      function setup() {
+        createCanvas(window.innerWidth,window.innerHeight);
+      }
+      
+      function draw() {
+        ax = accelerationX;
+        ay = accelerationY;
+        
+        if (ax > xHigh) {
+          ax = xHigh;
+        }
+        
+        if (ay > yHigh) {
+          ay = yHigh;
+        }
+        
+        document.getElementById('ax').innerHTML = "AccelerometerX value: " + ax;
+        document.getElementById('ay').innerHTML = "AccelerometerY value: " + ay;
+      }
+    </script>
+  </body>
+</html>
