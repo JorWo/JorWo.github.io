@@ -3,7 +3,7 @@
     <script src="p5.min.js"></script>
     <style>
       body {
-        font-size:50px;
+        font-size:5vh;
         position:fixed;
       }
       
@@ -17,6 +17,7 @@
     </style>
   </head>
   <body>
+  <h1>Accelerometer Values</h1>
   <p id='ax'></p>
   <p id='ay'></p>
     <script>
@@ -40,8 +41,8 @@
           yHigh = ay;
         }
         
-        document.getElementById('ax').innerHTML = "AccelerometerX value: " + xHigh;
-        document.getElementById('ay').innerHTML = "AccelerometerY value: " + yHigh;
+        document.getElementById('ax').innerHTML = "X value High: " + xHigh;
+        document.getElementById('ay').innerHTML = "Y value High: " + yHigh;
       }
     </script>
   </body>
