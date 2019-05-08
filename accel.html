@@ -21,6 +21,9 @@
   <p id='ax'></p>
   <p id='ay'></p>
     <script>
+      var r = 255;
+      var g = 255;
+      var b = 255;
       var ax;
       var ay;
       var xHigh = 0;
@@ -35,12 +38,19 @@
         
         if (ax > xHigh) {
           xHigh = ax;
+          r = xHigh;
+          g = 255-xHigh;
+          b = 255-xHigh;
         }
         
         if (ay > yHigh) {
           yHigh = ay;
+          r = yHigh;
+          g = 255-yHigh;
+          b = 255-yHigh;
         }
         
+        document.body.style.backgroundColor = 'rgb(' + r +','+ g +','+ b + ')';
         document.getElementById('ax').innerHTML = "X value High: " + xHigh;
         document.getElementById('ay').innerHTML = "Y value High: " + yHigh;
       }
