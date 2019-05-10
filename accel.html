@@ -38,12 +38,12 @@
         
         if (ax > xHigh) {
           xHigh = ax;
-          g = xHigh*50;
+          g = 255-(xHigh*5);
         }
         
         if (ay > yHigh) {
           yHigh = ay;
-          b = yHigh*50;
+          b = 255-(yHigh*5);
         }
         
         document.body.style.backgroundColor = 'rgb(' + r +','+ g +','+ b + ')';
